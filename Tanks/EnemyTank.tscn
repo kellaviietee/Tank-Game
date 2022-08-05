@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Tanks/Tank.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/tankDark_barrel1_outline.png" type="Texture" id=2]
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/tankBody_dark_outline.png" type="Texture" id=3]
+[ext_resource path="res://Tanks/EnemyTank.gd" type="Script" id=4]
+[ext_resource path="res://Bullets/EnemyBullet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Effects/Explosion.tscn" type="PackedScene" id=6]
+
+[node name="EnemyTank" groups=["Enemy"] instance=ExtResource( 1 )]
+script = ExtResource( 4 )
+bullet = ExtResource( 5 )
+explosion = ExtResource( 6 )
+
+[node name="Body" parent="." index="0"]
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 3 )
+
+[node name="Barrel" parent="Body" index="0"]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+
+[node name="Timer" type="Timer" parent="." index="2"]
+one_shot = true
+
+[node name="CooldownTimer" type="Timer" parent="." index="8"]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="change_direction"]
+[connection signal="timeout" from="CooldownTimer" to="." method="cooled_down"]
+
+[editable path="Body"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/explosion1.png" type="Texture" id=1]
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/explosion5.png" type="Texture" id=2]
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/explosion3.png" type="Texture" id=3]
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/explosion4.png" type="Texture" id=4]
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/explosion2.png" type="Texture" id=5]
+[ext_resource path="res://Effects/Explosion.gd" type="Script" id=6]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": false,
+"name": "explode",
+"speed": 7.0
+} ]
+
+[node name="Explosion" type="AnimatedSprite"]
+frames = SubResource( 5 )
+animation = "explode"
+script = ExtResource( 6 )
+
+[connection signal="animation_finished" from="." to="." method="_on_Explosion_animation_finished"]

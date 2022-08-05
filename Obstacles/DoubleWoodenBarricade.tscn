@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Obstacles/SingleWoodenBarricade.tscn" type="PackedScene" id=1]
+
+[node name="DoubleWoodenBarricade" type="Node2D"]
+
+[node name="SingleWoodenBarricade" parent="." instance=ExtResource( 1 )]
+position = Vector2( -32, 0 )
+
+[node name="SingleWoodenBarricade2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 0 )

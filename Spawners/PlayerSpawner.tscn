@@ -1,0 +1,9 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Spawners/Spawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Spawners/PlayerSpawner.gd" type="Script" id=2]
+[ext_resource path="res://Tanks/PlayerTank.tscn" type="PackedScene" id=3]
+
+[node name="PlayerSpawner" groups=["PlayerSpawner"] instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+enemy_1 = ExtResource( 3 )

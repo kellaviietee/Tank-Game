@@ -1,0 +1,137 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Spawners/Spawner.gd" type="Script" id=1]
+[ext_resource path="res://Tanks/EnemyTank.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tanks/FastEnemyTank.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Particle Pack/PNG (Transparent)/magic_03.png" type="Texture" id=4]
+[ext_resource path="res://Tanks/BigEnemyTank.tscn" type="PackedScene" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 32 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpawnLocation:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpawnLocation:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpawnLocation:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("SpawnLocation:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "spawning"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpawnLocation:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "add_characters"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpawnLocation:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 90.0, 180.0, 270.0, 360.0 ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("SpawnLocation:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0, 0.25, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("SpawnLocation:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0.5, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0, 0.25, -0.25, 0, 0.25, 0, 0.75, -0.25, 0, 0.25, 0, 0.5, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 )
+}
+
+[node name="Spawner" type="Area2D"]
+script = ExtResource( 1 )
+enemy_1 = ExtResource( 2 )
+enemy_2 = ExtResource( 3 )
+enemy_3 = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/spawning = SubResource( 3 )
+
+[node name="SpawnLocation" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )

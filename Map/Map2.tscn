@@ -1,0 +1,431 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Spawners/PowerUpManager.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Top-down Tanks Redux/PNG/Retina/treeGreen_large.png" type="Texture" id=2]
+[ext_resource path="res://Flag/Flag.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Spawners/PlayerSpawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Spawners/SpawnManager.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Top-down Tanks Redux/Tilesheet/terrainTiles_retina.png" type="Texture" id=7]
+[ext_resource path="res://Obstacles/FullIronBarricade.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Obstacles/FullWoodenBarricade.tscn" type="PackedScene" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 128, 128, 0, 128, 0, 0, 128, 0 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "terrainTiles_retina.png 0"
+0/texture = ExtResource( 7 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 256, 128, 128 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "terrainTiles_retina.png 1"
+1/texture = ExtResource( 7 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 256, 256, 128, 128 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "terrainTiles_retina.png 2"
+2/texture = ExtResource( 7 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 384, 256, 128, 128 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "terrainTiles_retina.png 3"
+3/texture = ExtResource( 7 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 512, 256, 128, 128 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "terrainTiles_retina.png 4"
+4/texture = ExtResource( 7 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 640, 256, 128, 128 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "terrainTiles_retina.png 5"
+5/texture = ExtResource( 7 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 768, 256, 128, 128 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "terrainTiles_retina.png 6"
+6/texture = ExtResource( 7 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 768, 384, 128, 128 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "terrainTiles_retina.png 7"
+7/texture = ExtResource( 7 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 640, 384, 128, 128 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "terrainTiles_retina.png 8"
+8/texture = ExtResource( 7 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 512, 384, 128, 128 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "terrainTiles_retina.png 9"
+9/texture = ExtResource( 7 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 384, 384, 128, 128 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "terrainTiles_retina.png 10"
+10/texture = ExtResource( 7 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 256, 384, 128, 128 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "terrainTiles_retina.png 11"
+11/texture = ExtResource( 7 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 128, 384, 128, 128 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "terrainTiles_retina.png 12"
+12/texture = ExtResource( 7 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 0, 256, 128, 128 )
+12/tile_mode = 2
+12/autotile/icon_coordinate = Vector2( 0, 0 )
+12/autotile/tile_size = Vector2( 128, 128 )
+12/autotile/spacing = 0
+12/autotile/occluder_map = [  ]
+12/autotile/navpoly_map = [  ]
+12/autotile/priority_map = [ Vector3( 0, 0, 2 ) ]
+12/autotile/z_index_map = [  ]
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "treeGreen_large.png 13"
+13/texture = ExtResource( 2 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 0, 0, 128, 128 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape = SubResource( 4 )
+13/shape_one_way = false
+13/shape_one_way_margin = 1.0
+13/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+13/z_index = 0
+
+[node name="Map" type="TileMap" groups=["Map"]]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 128, 128 )
+format = 1
+tile_data = PoolIntArray( -1, 13, 0, -65536, 13, 0, -65535, 13, 0, -65534, 13, 0, -65533, 13, 0, -65532, 13, 0, -65531, 13, 0, -65530, 13, 0, -65529, 13, 0, -65528, 13, 0, -65527, 13, 0, -65526, 13, 0, -65525, 13, 0, -65524, 13, 0, -65523, 13, 0, 65535, 13, 0, 0, 9, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 5, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 8, 0, 13, 13, 0, 131071, 13, 0, 65536, 0, 0, 65537, 12, 0, 65538, 12, 0, 65539, 12, 0, 65540, 0, 0, 65541, 12, 0, 65542, 12, 0, 65543, 12, 0, 65544, 12, 0, 65545, 12, 0, 65546, 12, 0, 65547, 12, 0, 65548, 0, 0, 65549, 13, 0, 196607, 13, 0, 131072, 0, 0, 131073, 12, 0, 131074, 12, 0, 131075, 12, 0, 131076, 0, 0, 131077, 12, 0, 131078, 12, 0, 131079, 12, 0, 131080, 12, 0, 131081, 12, 0, 131082, 12, 0, 131083, 12, 0, 131084, 0, 0, 131085, 13, 0, 262143, 13, 0, 196608, 0, 0, 196609, 12, 0, 196610, 12, 0, 196611, 12, 0, 196612, 0, 0, 196613, 12, 0, 196614, 12, 0, 196615, 12, 0, 196616, 12, 0, 196617, 12, 0, 196618, 12, 0, 196619, 12, 0, 196620, 0, 0, 196621, 13, 0, 327679, 13, 0, 262144, 0, 0, 262145, 12, 0, 262146, 12, 0, 262147, 12, 0, 262148, 0, 0, 262149, 12, 0, 262150, 12, 0, 262151, 12, 0, 262152, 12, 0, 262153, 12, 0, 262154, 12, 0, 262155, 12, 0, 262156, 0, 0, 262157, 13, 0, 393215, 13, 0, 327680, 2, 0, 327681, 1, 0, 327682, 5, 0, 327683, 1, 0, 327684, 11, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 5, 0, 327689, 1, 0, 327690, 1, 0, 327691, 1, 0, 327692, 3, 0, 327693, 13, 0, 458751, 13, 0, 393216, 0, 0, 393217, 12, 0, 393218, 0, 0, 393219, 12, 0, 393220, 0, 0, 393221, 12, 0, 393222, 12, 0, 393223, 12, 0, 393224, 0, 0, 393225, 12, 0, 393226, 12, 0, 393227, 12, 0, 393228, 0, 0, 393229, 13, 0, 524287, 13, 0, 458752, 0, 0, 458753, 12, 0, 458754, 0, 0, 458755, 12, 0, 458756, 0, 0, 458757, 12, 0, 458758, 12, 0, 458759, 12, 0, 458760, 0, 0, 458761, 12, 0, 458762, 12, 0, 458763, 12, 0, 458764, 0, 0, 458765, 13, 0, 589823, 13, 0, 524288, 0, 0, 524289, 12, 0, 524290, 0, 0, 524291, 12, 0, 524292, 0, 0, 524293, 12, 0, 524294, 12, 0, 524295, 12, 0, 524296, 0, 0, 524297, 12, 0, 524298, 12, 0, 524299, 12, 0, 524300, 0, 0, 524301, 13, 0, 655359, 13, 0, 589824, 0, 0, 589825, 12, 0, 589826, 0, 0, 589827, 12, 0, 589828, 0, 0, 589829, 12, 0, 589830, 12, 0, 589831, 12, 0, 589832, 0, 0, 589833, 12, 0, 589834, 12, 0, 589835, 12, 0, 589836, 0, 0, 589837, 13, 0, 720895, 13, 0, 655360, 0, 0, 655361, 12, 0, 655362, 0, 0, 655363, 12, 0, 655364, 0, 0, 655365, 12, 0, 655366, 12, 0, 655367, 12, 0, 655368, 0, 0, 655369, 12, 0, 655370, 12, 0, 655371, 12, 0, 655372, 0, 0, 655373, 13, 0, 786431, 13, 0, 720896, 0, 0, 720897, 12, 0, 720898, 0, 0, 720899, 12, 0, 720900, 0, 0, 720901, 12, 0, 720902, 12, 0, 720903, 12, 0, 720904, 0, 0, 720905, 12, 0, 720906, 12, 0, 720907, 12, 0, 720908, 0, 0, 720909, 13, 0, 851967, 13, 0, 786432, 7, 0, 786433, 1, 0, 786434, 4, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 4, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 6, 0, 786445, 13, 0, 917503, 13, 0, 851968, 13, 0, 851969, 13, 0, 851970, 13, 0, 851971, 13, 0, 851972, 13, 0, 851973, 13, 0, 851974, 13, 0, 851975, 13, 0, 851976, 13, 0, 851977, 13, 0, 851978, 13, 0, 851979, 13, 0, 851980, 13, 0, 851981, 13, 0 )
+
+[node name="Flag" parent="." instance=ExtResource( 3 )]
+position = Vector2( 832, 1600 )
+
+[node name="Barricades" type="Node2D" parent="."]
+
+[node name="FullIronBarricade" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 64, 256 )
+
+[node name="FullIronBarricade2" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 320, 256 )
+
+[node name="FullIronBarricade3" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 448, 256 )
+
+[node name="FullIronBarricade4" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 448, 384 )
+
+[node name="FullIronBarricade5" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 448, 512 )
+
+[node name="FullIronBarricade6" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 320, 576 )
+
+[node name="FullIronBarricade7" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 960, 1344 )
+
+[node name="FullIronBarricade8" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 960, 1216 )
+
+[node name="FullIronBarricade9" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 960, 1088 )
+
+[node name="FullIronBarricade10" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 960, 960 )
+
+[node name="FullIronBarricade11" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 960, 832 )
+
+[node name="FullIronBarricade12" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 960, 832 )
+
+[node name="FullIronBarricade13" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 1216, 1216 )
+
+[node name="FullIronBarricade18" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 1216, 1344 )
+
+[node name="FullIronBarricade14" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 1216, 1088 )
+
+[node name="FullIronBarricade15" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 1216, 960 )
+
+[node name="FullIronBarricade16" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 1216, 960 )
+
+[node name="FullIronBarricade17" parent="Barricades" instance=ExtResource( 8 )]
+position = Vector2( 1216, 832 )
+
+[node name="FullWoodenBarricade" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 192, 832 )
+
+[node name="FullWoodenBarricade2" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 192, 960 )
+
+[node name="FullWoodenBarricade3" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 192, 1088 )
+
+[node name="FullWoodenBarricade4" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 192, 1216 )
+
+[node name="FullWoodenBarricade5" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 192, 1344 )
+
+[node name="FullWoodenBarricade6" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 192, 1472 )
+
+[node name="FullWoodenBarricade7" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 192, 1472 )
+
+[node name="FullWoodenBarricade8" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 448, 832 )
+
+[node name="FullWoodenBarricade9" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 448, 960 )
+
+[node name="FullWoodenBarricade10" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 448, 1088 )
+
+[node name="FullWoodenBarricade11" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 448, 1216 )
+
+[node name="FullWoodenBarricade12" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 448, 1344 )
+
+[node name="FullWoodenBarricade13" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 448, 1472 )
+
+[node name="FullWoodenBarricade15" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 832, 832 )
+
+[node name="FullWoodenBarricade16" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 832, 960 )
+
+[node name="FullWoodenBarricade17" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 832, 1088 )
+
+[node name="FullWoodenBarricade18" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 832, 1216 )
+
+[node name="FullWoodenBarricade19" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 832, 1344 )
+
+[node name="FullWoodenBarricade20" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1024, 128 )
+
+[node name="FullWoodenBarricade21" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1024, 256 )
+
+[node name="FullWoodenBarricade22" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1024, 384 )
+
+[node name="FullWoodenBarricade23" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1024, 512 )
+
+[node name="FullWoodenBarricade24" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1024, 640 )
+
+[node name="FullWoodenBarricade35" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1472, 128 )
+
+[node name="FullWoodenBarricade36" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1472, 256 )
+
+[node name="FullWoodenBarricade37" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1472, 384 )
+
+[node name="FullWoodenBarricade38" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1472, 512 )
+
+[node name="FullWoodenBarricade39" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1472, 640 )
+
+[node name="FullWoodenBarricade40" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 704, 128 )
+
+[node name="FullWoodenBarricade41" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 704, 256 )
+
+[node name="FullWoodenBarricade42" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 704, 384 )
+
+[node name="FullWoodenBarricade43" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 704, 512 )
+
+[node name="FullWoodenBarricade44" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 704, 640 )
+
+[node name="FullWoodenBarricade25" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1344, 832 )
+
+[node name="FullWoodenBarricade26" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1344, 960 )
+
+[node name="FullWoodenBarricade27" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1344, 1088 )
+
+[node name="FullWoodenBarricade28" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1344, 1216 )
+
+[node name="FullWoodenBarricade29" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1344, 1344 )
+
+[node name="FullWoodenBarricade30" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1600, 832 )
+
+[node name="FullWoodenBarricade31" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1600, 960 )
+
+[node name="FullWoodenBarricade32" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1600, 1088 )
+
+[node name="FullWoodenBarricade33" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1600, 1216 )
+
+[node name="FullWoodenBarricade34" parent="Barricades" instance=ExtResource( 9 )]
+position = Vector2( 1600, 1344 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 832, 832 )
+current = true
+zoom = Vector2( 3, 3 )
+
+[node name="SpawnManager" parent="." instance=ExtResource( 5 )]
+
+[node name="PlayerSpawner" parent="." instance=ExtResource( 4 )]
+position = Vector2( 576, 1600 )
+
+[node name="PowerUpManager" parent="." instance=ExtResource( 1 )]
